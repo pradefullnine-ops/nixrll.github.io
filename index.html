@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotação Dólar em Tempo Real</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <p class="subtitle">Dólar americano igual a</p>
+                <h1 class="price">R$ <span id="cotacao">--,--</span></h1>
+                <p class="currency">Real brasileiro</p>
+                <p class="variation" id="variacao">--</p>
+            </div>
+
+            <div class="converter">
+                <div class="input-group">
+                    <input type="number" id="dolar" value="1.00" step="0.01" min="0">
+                    <label>Dólar americano</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="number" id="real" value="0.00" step="0.01" min="0" readonly>
+                    <label>Real brasileiro</label>
+                </div>
+            </div>
+
+            <div class="chart" id="chart">
+                <canvas id="grafico"></canvas>
+            </div>
+
+            <p class="update">Última atualização: <span id="atualizacao">--</span></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
